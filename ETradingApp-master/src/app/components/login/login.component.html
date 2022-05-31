@@ -1,0 +1,41 @@
+<body class="login">
+	<header></header>
+	<div class="container">
+		<div class="login-container-wrapper clearfix">
+			<div class="logo"><i class="fa fa-sign-in"></i></div>
+			<div class="welcome"><strong>Welcome,</strong> please login</div>
+
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)" class="form-horizontal login-form">
+                <div class="col-md-4" class="form-group relative">
+                    <label for="userName" class="form-label"> Enter User Name : </label>
+                    <input type="text" for="userName" autocomplete="off" id="login_username" class="form-control border border-2 border border-dark" name="Enter User Name" id="userName" required formControlName="userName">
+                    <i class="fa fa-user"></i>
+                </div>
+                <br>
+                <div class="col-md-4" class="form-group relative">
+                    <label for="password" class="form-label"> Enter Password : </label>
+                    <input id="login_password" type="password" name="password" id="password" class="form-control border border-2 border border-dark" required formControlName="password">
+                </div>
+                <br>
+                <div class="col-md-4" class="form-group relative">
+                    <label for="userType" class="form-label"> Select User Type : </label>
+                    <select name="userType" class="form-control border border-2 border border-dark" id="userType" formControlName="userType">
+                        <option value="admin"> Admin </option>
+                        <option value="customer"> Customer </option>
+                        <option value="businessowner"> Business Owner</option>            
+                    </select>   
+                </div>
+                <br>
+                <div class="form-group">
+                <button value="submit" class="btn btn-success btn-lg btn-block"> Login </button>               
+                </div>
+                <br>
+                <div class="checkbox pull-left">
+                    <label><input type="checkbox"> Remember</label>
+                  </div>
+                  <div class="checkbox pull-right">
+                    <label> <a href="">Forgot your password</a> </label>
+                  </div>
+            </form>
+		</div>
+	</div>

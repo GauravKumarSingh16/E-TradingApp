@@ -1,0 +1,40 @@
+<h2>Update Product</h2>
+<div>
+    <form [formGroup]="shareForm" (ngSubmit)="onFormSubmit(shareForm.value)">
+        <div>
+            <label for="id">Product Id</label>
+            <input type="number" name="id" id="id" readonly
+            formControlName="id">
+        </div>
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required
+                formControlName="name">
+        </div>
+        <div>
+            <label for="manufacturingDate">Manufacturing Date</label>
+            <input type="date" name="manufacturingDate" id="manufacturingDate" required
+                formControlName="manufacturingDate">
+        </div>
+        <div>
+            <label for="price">Price</label>
+            <input type="number" name="price" id="price" required
+                formControlName="price">
+        </div>
+        <div>
+            <label for="category">Category</label>
+            <select name="category" id="category" required
+                formControlName="category">
+                
+                <option value="">Select</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Stationary">Stationary</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Mobiles">Mobiles</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Update Product</button>
+        </div>
+    </form>
+</div>

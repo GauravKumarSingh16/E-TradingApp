@@ -1,0 +1,58 @@
+<div class="row">
+    <section class="section">
+      <header>
+        <h3>Registration</h3>
+        <h4>Please fill your information in this form</h4>
+      </header>
+      
+          <form [formGroup]="RegistrationForm" (ngSubmit)="onSubmit(RegistrationForm.value)"> 
+              <div class="col-md-6 form-item box-item" >
+                  <label for="Name" class="form-label"> Enter Your Name : </label>
+                  <input type="text" class=" form-control border border-3 border border-dark tx1" data-required name="Name" id="Name" placeholder="Enter Your Name" formControlName="Name">
+              </div>
+              <br>
+              <div class="col-md-6 form-item box-item" >
+                  <label for="Password" class="form-label"> Enter Password : </label>
+                  <input type="Password" class=" form-control border border-3 border border-dark tx1"  data-required name="password" id="password" placeholder="Enter Password" formControlName="Password"> 
+              </div> 
+              <br>
+              
+              
+              <div class="col-md-6 form-item box-item">
+  
+                  <label for="Email" class="form-label"> Enter Email Id : </label>
+                  <input type="email" name="Email" id="email" data-required data-number data-count="10" class="tx1 form-control border border-3 border border-dark" placeholder="Enter Email id" formControlName="Email"> 
+                  
+                </div>
+                <br>
+                <div class="col-md-6 form-item box-item">
+                  <label for="ContactNo" class="form-label"> Enter ContactNo : </label>
+                  <input type="number" name="ContactNo" id="contactNo" class="form-control border border-3 border border-dark" placeholder="Enter contactNo" formControlName="ContactNo"> 
+                  
+              </div>
+              <br>           
+              <div class="col-md-6 form-item box-item">
+                  <label for="Address" class="form-label"> Enter Address : </label>
+                  <input type="text" name="Address" id="address" class="tx1 form-control border border-3 border border-dark" data-required placeholder="Enter Address" formControlName="Address"> 
+                  
+              </div>
+        
+             
+            <br>
+            <div class="col-md-4" class="form-group relative">
+              <label for="UserType" class="form-label"> Select User Type : </label>
+              <select name="UserType" class="form-control border border-2 border border-dark" id="userType" formControlName="UserType">
+                  <option value="customer"> Customer </option>
+                  <option value="businessowner"> Business Owner </option>            
+              </select>   
+          </div>
+          
+          <div class="form-item">
+           <button class="submit" value="submit">Register</button> 
+          </div>
+        </form>
+        
+      <i class="wave"></i>
+    </section>
+  </div>
+  
