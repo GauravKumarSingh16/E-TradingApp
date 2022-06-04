@@ -1,0 +1,24 @@
+<h2> Add Shares</h2>
+<div>
+    <form [formGroup]="shareForm" (ngSubmit)="onFormSubmit(shareForm.value)">
+       
+        <div>
+            <label for="sharename">Share Name</label>
+            <input type="text" name="sharename" id="sharename" required
+                formControlName="sharename">
+        </div>
+        <div>
+            <label for="ShareQuantity">Share Quantity</label>
+            <input type="number" name="ShareQuantity" id="ShareQuantity" required
+                formControlName="ShareQuantity">
+        </div>
+        <div>
+            <label for="SharePrice">Share Price</label>
+            <input type="number" name="SharePrice" id="SharePrice" required
+                formControlName="SharePrice">
+        </div>
+        
+            <button type="submit"> Add Shares</button>
+    </form>
+    <a href="/logins">logout</a>
+</div>

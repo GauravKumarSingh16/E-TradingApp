@@ -1,0 +1,16 @@
+<h1>Available Shares</h1>
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>ShareName</th>
+        <th>SharePrice</th>
+        <th>ShareQuantity</th>
+    </tr>
+    <tr *ngFor="let p of ShareList">
+        <td>{{p.shareId}}</td>
+        <td>{{p.shareName}}</td>
+        <td>{{p.sharePrice}}</td>
+        <td>{{p.shareQuantity}}</td>
+       </tr> 
+       <a href="/logins">logout</a>
+</table>
