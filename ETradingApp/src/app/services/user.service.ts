@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { User } from '../models/user';
+import { observableToBeFn } from 'rxjs/internal/testing/TestScheduler';
 
 
 
@@ -32,5 +33,14 @@ export class UserService {
       return null;
    return JSON.parse(localStorage.getItem('userInfo')!);
 
+  }
+
+  getById(customerId:number):Observable<User>{
+    //https://localhost:44375/api
+    return this.client.get<User>(`${this.apiUrl}/${customerId}`);
+  }
+
+  update(customerId:number,user:any):Observable<any>{
+    return this.client.put(`${this.apiUrl}/${customerId}`,user);
   }
 }

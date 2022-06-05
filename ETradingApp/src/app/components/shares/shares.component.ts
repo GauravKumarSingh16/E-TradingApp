@@ -25,4 +25,7 @@ export class SharesComponent implements OnInit {
     });
   }
   
+  buyShare(){
+    alert("Share Buy Successfully");
+  }
 }

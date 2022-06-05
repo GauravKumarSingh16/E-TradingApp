@@ -1,4 +1,4 @@
-<h1>Available Shares</h1>
+<h1>Shares Available To Buy</h1>
 <table border="1">
     <tr>
         <th>Id</th>
@@ -11,6 +11,11 @@
         <td>{{p.shareName}}</td>
         <td>{{p.sharePrice}}</td>
         <td>{{p.shareQuantity}}</td>
-       </tr> 
+        <td>
+            <a [routerLink]="['Buy',p.shareId]">Buy</a>
+        </td>
+       </tr>
        <a href="/logins">logout</a>
+       <a [routerLink]="['Profile']">Edit Profile</a>
 </table>
+

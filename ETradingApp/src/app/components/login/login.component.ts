@@ -15,9 +15,9 @@ loginForm!:FormGroup;
 
   ngOnInit(): void {
     this.loginForm=new FormGroup({
-   userName:new FormControl(),
-   password:new FormControl(),
-   userType:new FormControl()
+   UserName:new FormControl(),
+   Password:new FormControl(),
+   UserType:new FormControl()
     });
   }
 onSubmit(form:NgForm)
@@ -25,11 +25,11 @@ onSubmit(form:NgForm)
   this.loginService.add(form).subscribe(result=>{
     alert('Form Submit');
     console.log(result);
-   if(result.userType=="customer")
+   if(result.UserType=="customer")
    { 
     this.router.navigate(['/addshares']);
    } 
-   else if(result.userType=="businessowner")
+   else if(result.UserType=="businessowner")
     {
     this.router.navigate(['/shares']);
     }

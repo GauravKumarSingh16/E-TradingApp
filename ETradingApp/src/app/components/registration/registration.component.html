@@ -12,6 +12,11 @@
               </div>
               <br>
               <div class="col-md-6 form-item box-item" >
+                <label for="UserName" class="form-label"> Enter UserName : </label>
+                <input type="text" class=" form-control border border-3 border border-dark tx1" data-required name="UserName" id="UserName" placeholder="Enter UserName" formControlName="UserName">
+            </div>
+            <br>
+              <div class="col-md-6 form-item box-item" >
                   <label for="Password" class="form-label"> Enter Password : </label>
                   <input type="Password" class=" form-control border border-3 border border-dark tx1"  data-required name="password" id="password" placeholder="Enter Password" formControlName="Password"> 
               </div> 
@@ -50,6 +55,7 @@
           <div class="form-item">
            <button class="submit" value="submit">Register</button> 
           </div>
+          <a [routerLink]="['/logins']" style="float:right;color:rgb(0, 0, 0)">Alreay Have account? Click to Login!</a>
         </form>
         
       <i class="wave"></i>

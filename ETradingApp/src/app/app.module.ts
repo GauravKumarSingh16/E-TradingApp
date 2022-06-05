@@ -10,8 +10,7 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { SharesComponent } from './components/shares/shares.component';
 import { AddSharesComponent } from './components/add-shares/add-shares.component';
 import { UpdatesharesComponent } from './components/updateshares/updateshares.component';
-import { OrderListComponent } from './components/order-list/order-list.component';
-import { CustomerComponent } from './components/customer/customer.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
@@ -22,8 +21,8 @@ import { CustomerComponent } from './components/customer/customer.component';
     SharesComponent,
     AddSharesComponent,
     UpdatesharesComponent,
-    OrderListComponent,
-    CustomerComponent,
+    ProfileComponent,
+  
  
   ],
   imports: [
