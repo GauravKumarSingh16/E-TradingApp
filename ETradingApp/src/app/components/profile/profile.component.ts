@@ -39,7 +39,7 @@ export class ProfileComponent implements OnInit {
   onFormSubmit(form:NgForm){
     this.userService.update(this.userId,form).subscribe(result=>{
       alert('Profile Updated');
-      this.router.navigate(['users']);
+      this.router.navigate(['/addshares']);
     }, err=>{
       alert(err);
     });
