@@ -22,16 +22,17 @@ loginForm!:FormGroup;
   }
 onSubmit(form:NgForm)
 {
-  this.loginService.add(form).subscribe(result=>{
+  this.loginService.add(form).subscribe(login=>{
     alert('Form Submit');
-    console.log(result);
-   if(result.UserType=="customer")
+    console.log(login);
+    localStorage.setItem('userInfo',JSON.stringify(login));
+   if(login.UserType=="customer")
    { 
-    this.router.navigate(['/addshares']);
-   } 
-   else if(result.UserType=="businessowner")
-    {
     this.router.navigate(['/shares']);
+   } 
+   else if(login.UserType=="businessowner")
+    {
+    this.router.navigate(['/addshares']);
     }
     else
    this.router.navigate(['']);

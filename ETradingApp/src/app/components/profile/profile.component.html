@@ -1,24 +1,19 @@
-<form [formGroup]="userForm">
+<form [formGroup]="customerForm">
     <div class="row justify-content-center">
 
         <div class="col-md-8 card shadow px-3 py-3">
             <div class="row">
                 <h2 class="col">Profile</h2>
-                <div class="col ml-auto text-right">
-                    <button class="btn btn-success" type="button">
-                        <i class="fa fa-pencil btn-sm"></i>
-                        Edit Profile
-                    </button>
-                </div>
+                
             </div>
 
             <hr>
 
-            <div>EditMode: <span class="badge badge-danger">false</span></div>
+            
             <hr>
             <div class="form-group col-md-3">
-                <label for="Id">Product Id</label>
-                <input type="number" name="Id" id="Id" readonly  formControlName="Id"  
+                <label for="userId">Id</label>
+                <input type="number" name="userId" id="userId"  formControlName="userId"  
                 class="form-control">
             </div>
             <div class="form-group">
@@ -29,7 +24,7 @@
             </div>
             <div class="form-group">
                 <label >Password</label>
-                <input type="text" class="form-control"
+                <input type="password" class="form-control"
                 formControlName="password">
                 
             </div>
@@ -51,11 +46,14 @@
                 formControlName="phoneNumber">
                 
             </div>
-            <div class="form-group">
-                <label >UserType</label>
-                <input type="text" class="form-control"
+            <div class="col-md-4" class="form-group relative">
+                <label for="userType" class="form-label"> Select User Type : </label>
+                <select name="userType" class="form-control border border-2 border border-dark" id="userType" 
                 formControlName="userType">
-                
+                    <option value="">Select</option>
+                    <option value="customer"> Customer </option>
+                    <option value="businessowner"> Business Owner</option>            
+                </select>   
             </div>
             <div class="btn-row">
                 <button type="submit" class="btn btn-primary mr-2">Save Profile</button>

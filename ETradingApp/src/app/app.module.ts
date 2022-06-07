@@ -11,6 +11,9 @@ import { SharesComponent } from './components/shares/shares.component';
 import { AddSharesComponent } from './components/add-shares/add-shares.component';
 import { UpdatesharesComponent } from './components/updateshares/updateshares.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { BusinessownerComponent } from './components/businessowner/businessowner.component';
+import { CompanyComponent } from './components/company/company.component';
+import { CustomerComponent } from './components/customer/customer.component';
 
 
 @NgModule({
@@ -22,6 +25,9 @@ import { ProfileComponent } from './components/profile/profile.component';
     AddSharesComponent,
     UpdatesharesComponent,
     ProfileComponent,
+    BusinessownerComponent,
+    CompanyComponent,
+    CustomerComponent,
   
  
   ],

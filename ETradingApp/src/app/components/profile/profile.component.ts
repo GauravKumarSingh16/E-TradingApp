@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Registration } from 'src/app/models/registration';
-import { User } from 'src/app/models/user';
-import { UserService } from 'src/app/services/user.service';
+import { Customer } from 'src/app/models/customer';
+import { CustomerService } from 'src/app/services/customer.service';
 
 @Component({
   selector: 'app-profile',
@@ -11,33 +10,34 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  userId! :number;
-  user!: User;
-  userForm!:FormGroup;
+  Id! :number;
+  customer!: Customer;
+  customerForm!:FormGroup;
 
   constructor(private formBuilder:FormBuilder,
     private router:Router,
-    private userService:UserService,
+    private customerService:CustomerService,
     private route:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.userId=this.route.snapshot.params['customerId'];
-    this.userService.getById(this.userId).subscribe(user=>{
-      console.log(User);
+    this.Id=this.route.snapshot.params['Id'];
+    this.customerService.getById(this.Id).subscribe(customer=>{
+      console.log(Customer);
 
-      this.userForm=new FormGroup({
-        Id:new FormControl(this.userId),
-        fullname:new FormControl(user.Name),
-        password:new FormControl(user.Password),
-        email:new FormControl(user.Email),
-        address:new FormControl(user.Address),
-        phoneNumber:new FormControl(user.ContactNo),
-        userType:new FormControl(user.UserType)
+      this.customerForm=new FormGroup({
+        userId:new FormControl(this.Id),
+        fullname:new FormControl(customer.CustomerName),
+        username:new FormControl(customer.UserName),
+        password:new FormControl(customer.Password),
+        email:new FormControl(customer.CustomerEmail),
+        address:new FormControl(customer.Address),
+        phoneNumber:new FormControl(customer.ContactNo),
+        userType:new FormControl(customer.UserType)
       });
     })
   }
   onFormSubmit(form:NgForm){
-    this.userService.update(this.userId,form).subscribe(result=>{
+    this.customerService.update(this.Id,form).subscribe(result=>{
       alert('Profile Updated');
       this.router.navigate(['/addshares']);
     }, err=>{

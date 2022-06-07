@@ -16,21 +16,25 @@ export class ShareService {
     return this.client.get<Share[]>(this.apiUrl);
   }
 
-   /*add(share:any):Observable<Share>{
+  add(share:any):Observable<Share>
+  {
     return this.client.post<Share>(this.apiUrl,share);
   }
 
- getById(id:number):Observable<Share>{
+  getById(shareId:number):Observable<Share>
+  {
     //https://localhost:44375/api/share/id
-    return this.client.get<Share>(`${this.apiUrl}/${id}`);
+    return this.client.get<Share>(`${this.apiUrl}/${shareId}`);
   }
 
-  update(id:number,share:any):Observable<any>{
-    return this.client.put(`${this.apiUrl}/${id}`,share);
+  update(shareId:number,share:any):Observable<any>
+  {
+    return this.client.put(`${this.apiUrl}/${shareId}`,share);
   }
 
-  delete(id:number):Observable<any>{
+  delete(shareId:number):Observable<any>
+  {
     //https://localhost:44375/api/share/id
-    return this.client.delete(`${this.apiUrl}/${id}`);
-  }*/
+    return this.client.delete(`${this.apiUrl}/${shareId}`);
+  }
 }

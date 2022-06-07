@@ -1,0 +1,51 @@
+     <div class="row">
+    <section class="section">
+        <header>
+          <h3>Add Customer</h3>
+        </header>
+    <form [formGroup]="customerForm" (ngSubmit)="onFormSubmit(customerForm.value)" > 
+      <div class="col-md-6 form-item box-item">
+        <label class="form-label" for="CustomerId"> Enter CustomerId : </label>
+        <input type="text" class=" form-control border border-3 border border-dark tx1" name="customerId" id="CustomerId" placeholder="Enter Customer Id" formControlName="customerId"> 
+    </div>
+    <div class="col-md-6 form-item box-item">
+      <label class="form-label" for="UserName"> Enter UserName : </label>
+      <input type="text" class=" form-control border border-3 border border-dark tx1" name="username" id="UserName" placeholder="Enter user name" formControlName="username"> 
+  </div>
+
+  <div class="col-md-6 form-item box-item">
+    <label class="form-label" for="Password"> Enter Password : </label>
+    <input type="password" class=" form-control border border-3 border border-dark tx1" name="pasword" id="Password" placeholder="Enter Password" formControlName="password"> 
+</div>
+
+  
+        <div class="col-md-6 form-item box-item">
+            <label class="form-label" for="customername"> Enter Customer Name : </label>
+            <input type="text" class=" form-control border border-3 border border-dark tx1" name="" id="customerName" placeholder="Enter customer Name" formControlName="customerName"> 
+        </div>
+
+        <div class="col-md-6 form-item box-item">
+            <label class="form-label" for="customerEmail"> Enter Customer Email : </label>
+            <input type="text" class=" form-control border border-3 border border-dark tx1" name="" id="customerEmail" placeholder="Enter customer Email" formControlName="customerEmail"> 
+        </div>
+
+        <div class="col-md-6 form-item box-item">
+            <label class="form-label" for="contactNo"> Enter Contact No: </label>
+            <input type="number" class=" form-control border border-3 border border-dark tx1" name="" id="contactNo" placeholder="Enter Contact No Name" formControlName="contactNo"> 
+        </div>
+
+        <div class="col-md-6 form-item box-item">
+            <label class="form-label" for="address"> Enter Address : </label>
+            <input type="text" class=" form-control border border-3 border border-dark tx1" name="" id="address" placeholder="Enter Address" formControlName="address"> 
+        </div>
+
+        <br>
+        
+          <div class="form-item">
+        <button  class="submit" value="submit"> Add Customer </button> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+        <strong><a href="" class="login">Home</a></strong>
+          </div>
+    </form>
+    <i class="wave"></i>
+</section>
+</div>

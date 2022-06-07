@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ShareService } from 'src/app/services/share.service';
 
 @Component({
@@ -13,24 +13,23 @@ export class AddSharesComponent implements OnInit {
   shareForm!:FormGroup;
 
   constructor(private shareService:ShareService,
-    private router:Router) { }
+    private router:Router,
+    private route:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.shareForm=new FormGroup({
-      shareName:new FormControl(),
+     this.shareForm=new FormGroup({
+      sharename:new FormControl(),
       ShareQuantity:new FormControl(),
-      sharePrice:new FormControl()
-    })
+      SharePrice:new FormControl()
+    });
   }
 
   onFormSubmit(form:NgForm){
-    /*this.shareService.add(form).subscribe(result=>{
+    this.shareService.add(form).subscribe(result=>{
       alert('Share Added');
-      this.router.navigate(['/shares']);
+      this.router.navigate(['/addshares']);
     },err=>{
-      console.log(err);
       alert(err);
     })
-  }*/
   }
 }

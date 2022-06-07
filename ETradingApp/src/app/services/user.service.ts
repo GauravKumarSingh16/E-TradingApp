@@ -34,13 +34,5 @@ export class UserService {
    return JSON.parse(localStorage.getItem('userInfo')!);
 
   }
-
-  getById(customerId:number):Observable<User>{
-    //https://localhost:44375/api
-    return this.client.get<User>(`${this.apiUrl}/${customerId}`);
-  }
-
-  update(customerId:number,user:any):Observable<any>{
-    return this.client.put(`${this.apiUrl}/${customerId}`,user);
-  }
+  
 }

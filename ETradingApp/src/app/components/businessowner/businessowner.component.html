@@ -1,0 +1,42 @@
+<div class="row">
+    <section class="section">
+        <header>
+          <h3>Add Businessonwer</h3>
+        </header>
+    <form [formGroup]="businessownerForm" (ngSubmit)="onFormSubmit(businessownerForm.value)" > 
+      <div class="col-md-6 form-item box-item">
+        <label class="form-label" for="BusinessownerId"> Enter BusinessownerId : </label>
+        <input type="text" class=" form-control border border-3 border border-dark tx1" name="businessownerId" id="BusinessOwnerId" placeholder="Enter businessowner Id" formControlName="businessownerId"> 
+    </div>
+    <div class="col-md-6 form-item box-item">
+      <label class="form-label" for="UserName"> Enter UserName : </label>
+      <input type="text" class=" form-control border border-3 border border-dark tx1" name="username" id="UserName" placeholder="Enter user name" formControlName="username"> 
+  </div>
+  
+        <div class="col-md-6 form-item box-item">
+            <label class="form-label" for="businessownername"> Enter Businessowner Name : </label>
+            <input type="text" class=" form-control border border-3 border border-dark tx1" name="" id="businessownerName" placeholder="Enter businessowner Name" formControlName="businessownerName"> 
+        </div>
+        <br>
+        <div class="col-md-6 form-item box-item">
+            <label  class="form-label" for="businessownerType"> Enter businessowner Type : </label>
+            <br>
+            <input type="retailer" id="business" name="fav_language" value="business" formControlName="businessownerType">
+            <label for="business">Business</label>  &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="wholesaler" id="business" name="fav_language" value="business" formControlName="businessownerType">
+            <label for="business"> Business</label>
+        </div>
+        <br>
+        <div class="col-md-6 form-item box-item">
+          <label class="form-label" for="businessownerEmail"> Enter Businessowner Email : </label>
+          <input type="text" class=" form-control border border-3 border border-dark tx1" name="" id="businessownerEmail" placeholder="Enter businessowner Email" formControlName="businessownerEmail"> 
+      </div>
+        
+          <div class="form-item">
+        <button  class="submit" value="submit"> Add Businessonwer </button> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+        <strong><a href="" class="login">Home</a></strong>
+          </div>
+    </form>
+    <i class="wave"></i>
+</section>
+</div>

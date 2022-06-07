@@ -1,0 +1,28 @@
+<h2>Company Details Form</h2>
+<div>
+    <form [formGroup]="companyForm" (ngSubmit)="onFormSubmit(companyForm.value)">
+        <div>
+            <label for="companyName">Company Name</label>
+            <input type="text" name="companyName" id="companyName" required
+                formControlName="companyName">
+        </div>
+        <div>
+            <label for="companyEmail">Company Email Id</label>
+            <input type="text" name="companyEmail" id="companyEmail" required
+                formControlName="companyEmail">
+        </div>
+        <div>
+            <label for="contactNo">Contact No.</label>
+            <input type="number" name="contactNo" id="contactNo" required
+                formControlName="contactNo">
+        </div>
+        <div>
+            <label for="address">Company Address</label>
+            <input type="text" name="address" id="address" required
+                formControlName="address">
+        </div>
+        <div>
+            <button type="submit">Add Share</button>
+        </div>
+    </form>
+</div>

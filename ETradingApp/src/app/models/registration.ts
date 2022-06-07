@@ -4,7 +4,7 @@ export class Registration {
     UserName!:string;
     Password!: string;
     Email!: string;
-    Address!: string;
     ContactNo!: number;
+    Address!: string;
     UserType!: string;
 }

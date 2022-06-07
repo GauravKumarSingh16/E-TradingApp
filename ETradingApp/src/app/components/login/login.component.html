@@ -7,19 +7,20 @@
 
             <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)" class="form-horizontal login-form">
                 <div class="col-md-4" class="form-group relative">
-                    <label for="userName" class="form-label"> Enter User Name : </label>
-                    <input type="text" for="userName" autocomplete="off" id="login_username" class="form-control border border-2 border border-dark" name="Enter User Name" id="userName" required formControlName="userName">
+                    <label for="UserName" class="form-label"> Enter User Name : </label>
+                    <input type="text" for="UserName" autocomplete="off" id="login_username" class="form-control border border-2 border border-dark" name="Enter User Name" id="UserName" required formControlName="UserName">
                     <i class="fa fa-user"></i>
                 </div>
                 <br>
                 <div class="col-md-4" class="form-group relative">
-                    <label for="password" class="form-label"> Enter Password : </label>
-                    <input id="login_password" type="password" name="password" id="password" class="form-control border border-2 border border-dark" required formControlName="password">
+                    <label for="Password" class="form-label"> Enter Password : </label>
+                    <input id="login_password" type="Password" name="Password" id="Password" class="form-control border border-2 border border-dark" required formControlName="Password">
                 </div>
                 <br>
                 <div class="col-md-4" class="form-group relative">
-                    <label for="userType" class="form-label"> Select User Type : </label>
-                    <select name="userType" class="form-control border border-2 border border-dark" id="userType" formControlName="userType">
+                    <label for="UserType" class="form-label"> Select User Type : </label>
+                    <select name="UserType" class="form-control border border-2 border border-dark" id="UserType" formControlName="UserType">
+                        <option value="">Select</option>
                         <option value="admin"> Admin </option>
                         <option value="customer"> Customer </option>
                         <option value="businessowner"> Business Owner</option>            

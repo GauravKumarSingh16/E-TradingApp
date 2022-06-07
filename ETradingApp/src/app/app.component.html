@@ -1,19 +1,19 @@
 <div>
-    <h1>E-Trading System</h1>
+  <h1>E-Trading System</h1>
+
+  <div *ngIf="userService.isLoggedIn()">
+  <a [routerLink]="['shares']">shares</a> |
   
-    <div *ngIf="userService.isLoggedIn()">
-    <a [routerLink]="['products']">Products</a> |
-    
-    <a *ngIf="userService.getUser().role == 'Admin'"
-    [routerLink]="['products/add']">Add Products</a>|
-    
-    <a (click)="logout()">Logout</a>
-    </div> 
-    <hr>
-    <router-outlet></router-outlet>
-    
-    <hr>
-    <div>
-      &copy;E-Trading System
-    </div>
+  <a *ngIf="userService.getUser().role == 'businessowner'"
+  [routerLink]="['addshares']">Add shares</a>|
+  
+  <a (click)="logout()">Logout</a>
+  </div> 
+  <hr>
+  <router-outlet></router-outlet>
+  
+  <hr>
+  <div>
+    &copy;E-Trading System
+  </div>
     

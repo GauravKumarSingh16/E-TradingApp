@@ -1,7 +1,7 @@
 export class Login {
-    userName!:string;
-    password!:string;
-    userType!:string;
+    UserName!:string;
+    Password!:string;
+    UserType!:string;
    // role!:string;
     //token!:string;
   }

@@ -26,8 +26,8 @@ export class RegistrationComponent implements OnInit {
       UserName:new FormControl(),
       Password:new FormControl(), 
       Email:new FormControl(),
-      Address: new FormControl(),
       ContactNo:new FormControl(),
+      Address: new FormControl(),
       UserType:new FormControl()
     });
   }
