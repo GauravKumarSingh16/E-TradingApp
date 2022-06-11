@@ -14,6 +14,10 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { BusinessownerComponent } from './components/businessowner/businessowner.component';
 import { CompanyComponent } from './components/company/company.component';
 import { CustomerComponent } from './components/customer/customer.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { ShowInspectionComponent } from './components/admin/show-inspection/show-inspection.component';
+import { AddEditInspectionComponent } from './components/admin/add-edit-inspection/add-edit-inspection.component';
 
 
 @NgModule({
@@ -28,6 +32,10 @@ import { CustomerComponent } from './components/customer/customer.component';
     BusinessownerComponent,
     CompanyComponent,
     CustomerComponent,
+    AdminComponent,
+    NavBarComponent,
+    ShowInspectionComponent,
+    AddEditInspectionComponent,
   
  
   ],

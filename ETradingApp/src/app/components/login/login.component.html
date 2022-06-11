@@ -20,7 +20,7 @@
                 <div class="col-md-4" class="form-group relative">
                     <label for="UserType" class="form-label"> Select User Type : </label>
                     <select name="UserType" class="form-control border border-2 border border-dark" id="UserType" formControlName="UserType">
-                        <option value="">Select</option>
+                        <option selected value="" >Select User Type</option>
                         <option value="admin"> Admin </option>
                         <option value="customer"> Customer </option>
                         <option value="businessowner"> Business Owner</option>            
@@ -31,12 +31,7 @@
                 <button value="submit" class="btn btn-success btn-lg btn-block"> Login </button>               
                 </div>
                 <br>
-                <div class="checkbox pull-left">
-                    <label><input type="checkbox"> Remember</label>
-                  </div>
-                  <div class="checkbox pull-right">
-                    <label> <a href="">Forgot your password</a> </label>
-                  </div>
+                  <a [routerLink]="['/registration']" style="float:right;color:rgb(0, 0, 0)">New User? Click to Register!</a>
             </form>
 		</div>
 	</div>

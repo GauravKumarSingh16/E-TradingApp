@@ -1,0 +1,34 @@
+<form>
+    <div class="mb-3">
+      <label for="fullName" class="form-label">FullName</label>
+      <input type="text" class="form-control" name="fullName" *ngIf="inspection.id!=0" disabled>
+      <select class="form-control" name="fullName id="fullName *ngIf="inspection.id==0">
+        <option *ngFor="let type of inspectionTypesList$|async" [value]="type.id">{{type.inspectionName}}</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <select class="form-control" name="username" id="username" >
+        <option *ngFor="let status of statusList$|async" [value]="status.statusOption">{{status.statusOption}}</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <select class="form-control" name="email" id="email" >
+        <option *ngFor="let status of statusList$|async" [value]="status.statusOption">{{status.statusOption}}</option>
+      </select>
+    </div>
+   
+    
+    <div class="mb-3">
+      <label for="Role" class="form-label">Role</label>
+      <input type="text" class="form-control"  name="Role">
+    </div>
+    <button (click)="addInspection()" *ngIf="inspection.id==0" class="btn btn-primary">
+      Add
+    </button>
+    <button (click)="updateInspection()" *ngIf="inspection.id!=0" class="btn btn-primary">
+      Update
+    </button>
+  </form>
+  

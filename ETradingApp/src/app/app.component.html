@@ -1,15 +1,8 @@
+<app-nav-bar></app-nav-bar>
 <div>
-  <h1>E-Trading System</h1>
-
-  <div *ngIf="userService.isLoggedIn()">
-  <a [routerLink]="['shares']">shares</a> |
-  
-  <a *ngIf="userService.getUser().role == 'businessowner'"
-  [routerLink]="['addshares']">Add shares</a>|
-  
-  <a (click)="logout()">Logout</a>
-  </div> 
-  <hr>
+  <h1 style="text-align:center">E-Trading System</h1>
+</div>
+<hr>
   <router-outlet></router-outlet>
   
   <hr>
